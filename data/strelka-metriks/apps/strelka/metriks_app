@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+require 'strelka'
+
+
+# The main strelka-metriks application
+class Strelka::Metriks::Application < Strelka::App
+
+	# Uncomment this if you need an appid other than 
+	# 'strelka-metriks-application'.
+	#ID = 'FIX' # (set the app id of the main application)
+
+	# Load some plugins
+	plugins :templating, :routing
+
+	# By default, responses are HTML
+	default_type 'text/html'
+
+	# Templating -- wrap everything in the layout
+	layout 'layout.tmpl'
+	templates \
+		:top => 'top.tmpl'
+
+
+	# GET request handler -- handles all GET requests
+	get do |req|
+		# Use the 'top' template for the body, wrapped in the 'layout' template
+		return :top
+	end
+
+
+end # class Strelka::Metriks::Application
+
+
+Strelka::Metriks::Application.run if __FILE__ == $0
+

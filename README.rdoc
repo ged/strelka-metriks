@@ -1,0 +1,16 @@
+= strelka-metriks
+
+* FIX (url)
+
+== Description
+
+FIX (describe your package)
+
+== Installation
+
+    gem install strelka-metriks
+
+== License
+
+Copyright (c) 2012, FIX
+All rights reserved.

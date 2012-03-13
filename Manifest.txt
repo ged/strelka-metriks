@@ -1,0 +1,8 @@
+History.rdoc
+README.rdoc
+Rakefile
+data/strelka/metriks/apps/strelka/metriks_app
+data/strelka/metriks/templates/layout.tmpl
+data/strelka/metriks/templates/top.tmpl
+lib/strelka/metriks.rb
+spec/strelka/metriks_spec.rb
