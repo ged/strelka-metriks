@@ -1,0 +1,3 @@
+mongrel2:
+  configdb: /path/to/mongrel2.sqlite
+

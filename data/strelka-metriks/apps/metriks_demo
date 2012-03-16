@@ -1,0 +1,32 @@
+# -*- ruby -*-
+#encoding: utf-8
+# vim: set nosta noet ts=4 sw=4:
+
+require 'strelka'
+
+# A little dead-simple demo app for strelka-metriks
+class MetriksDemo < Strelka::App
+
+	ID = 'metriks-demo'
+
+	# Load some plugins
+	plugins :routing, :metriks
+
+	# By default, responses are not HTML
+	default_type 'text/plain'
+
+
+	# GET request handler -- handles all GET requests
+	get do |req|
+		response = req.response
+		response.status = HTTP::OK
+		response.body = "Yeah! This is gonna be AWESOME! IN THE CLOUD"
+		return response
+	end
+
+
+end # class MetriksDemo
+
+Strelka.load_config( 'config.yml' )
+MetriksDemo.run
+

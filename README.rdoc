@@ -1,14 +1,32 @@
 = strelka-metriks
 
-* FIX (url)
+* http://deveiate.org/projects/Strelka/wiki/Plugins
+
 
 == Description
 
-FIX (describe your package)
+This is a plugin for Strelka web applications that adds convenient
+statistics-gathering and reporting for common points in the request lifecycle
+using the fantastic Metriks:https://github.com/eric/metriks/
+library by Eric Lindvall.
+
 
 == Installation
 
     gem install strelka-metriks
+
+
+== Usage
+
+In your application:
+
+    class MyApp < Strelka::App
+	
+	    plugins :metriks
+	
+	end # class MyApp
+
+This will load Metriks 
 
 == License
 
